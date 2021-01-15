@@ -1,0 +1,27 @@
+<h1 style="color: white; margin-left: 20px;">Galeria</h1>
+
+
+<div class="card-group">
+
+    <div class="col-sm-4" style="display: flex;" *ngFor="let imageUrl of imagesUrl">
+        <div class="card4">
+            <div class="img-fluid">
+                <img src={{imageUrl.url}}>
+                <img src="https://images-ajota.s3.amazonaws.com/1610654994179.jpg" alt="" id="placeholder">
+            </div>
+
+            <div class="card4-inner">
+
+                <div class="content">
+                    <h4 style="color: white; margin-left: 100px;">{{imageUrl.price}} Bs</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>

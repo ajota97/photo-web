@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card2">
+            <div class="card-header">
+                <h3>Registro</h3>
+            </div>
+            <div class="card-body">
+                <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="name" #name="ngModel" [(ngModel)]="photoStudio.name" class="form-control" required pattern="[a-z A-ZÀ-ÿ ]+" placeholder="name">
+                        <small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block">
+                            El nombre no es válido
+                            </small>
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="email" #email="ngModel" [(ngModel)]="photoStudio.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
+                        <small *ngIf="!email.valid && email.touched" class="invalid-feedback d-block">
+                            El email no es válido
+                            </small>
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="photoStudio.password" required placeholder="Contraseña">
+                        <small *ngIf="!email.valid && email.touched" class="invalid-feedback d-block">
+                            La contraseña no es válida
+                            </small>
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="photoStudio.phone" placeholder="Telefono">
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="description" #description="ngModel" [(ngModel)]="photoStudio.description" placeholder="Descripcion">
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="address" #address="ngModel" [(ngModel)]="photoStudio.address" placeholder="Direccion">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-12 mt-3 ml-5">
+                            <input type="submit" value="Registrarme" class="btn float-left btn-warning" [disabled]="registerForm.invalid">
+                            <button class="btn btn-danger ml-4" [routerLink]="['/login']"> Cancelar</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="card-footer">
+
+
+            </div>
+        </div>
+    </div>
+</div>

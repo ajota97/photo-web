@@ -1,0 +1,26 @@
+<div class="col-lg-12 mt-3">
+    <h1 style="color: white;">Eventos</h1>
+    <hr>
+
+    <ul class="list-group list-group-flush  list-eventos">
+        <li class="list-group-item list-group-item" *ngFor="let evento of eventos">
+            <h4>
+                <a [routerLink]="['/add/image']" style="color: white;">{{evento.name}}</a>
+            </h4>
+
+            <span class="badge badge-primary">
+                    {{evento.address}}
+            </span>
+
+            <a [routerLink]="['/add/image',evento._id]" class="btn btn-sm btn-primary float-right">Galeria </a>
+            <a [routerLink]="['/subir/image',evento._id]" class="btn btn-sm btn-success float-md-right " style="margin-right: 10px">Añadir Fotos</a>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+</div>

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/da23da7e-edd0-4208-83d7-df6bbc4fe17c/resourceGroups/Angular-projects/providers/Microsoft.Web/sites/photostudio-x",
+    "appService.deploySubpath": "dist\\photo-web"
+}
